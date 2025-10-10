@@ -1,1 +1,115 @@
-coming soon
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Jamster.co.uk 2006 site revival</title>
+    <meta charset="UTF-8">
+    <style>
+        pre {
+            display: flex;
+            justify-content: center;
+            transform: scale(0.8);
+            font-smooth: never;
+            -webkit-font-smoothing: none;
+        }
+
+        body {
+            background: #141414;
+            color: #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: monospace;
+        }
+
+        a {
+            color: #eee;
+        }
+
+        div {
+            display: flex;
+            gap: 16px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<pre>              
+A
+A     
+A
+A    
+A
+A  
+A
+A  
+A
+A  
+
+
+       _                     _                           _      ___   ___   ___    __                   _            _ 
+      | |                   | |                         | |    |__ \ / _ \ / _ \  / /                  (_)          | |
+      | | __ _ _ __ ___  ___| |_ ___ _ __ ___ ___  _   _| | __    ) | | | | | | |/ /_    _ __ _____   _____   ____ _| |
+  _   | |/ _` | '_ ` _ \/ __| __/ _ \ '__/ __/ _ \| | | | |/ /   / /| | | | | | | '_ \  | '__/ _ \ \ / / \ \ / / _` | |
+ | |__| | (_| | | | | | \__ \ ||  __/ |_| (_| (_) | |_| |   <   / /_| |_| | |_| | (_) | | | |  __/\ V /| |\ V / (_| | |
+  \____/ \__,_|_| |_| |_|___/\__\___|_(_)\___\___(_)__,_|_|\_\ |____|\___/ \___/ \___/  |_|  \___| \_/ |_| \_/ \__,_|_|
+                                                                                                                       
+                                                                                                                       
+  Coming soon of this page
+
+
+
+
+
+
+
+
+
+
+
+
+A
+A  
+
+
+
+                                                                         made and powered by: Vendettathegamerreal
+
+                                                    contact and bug reports: https://github.com/Vendettathegamerreal/jamsterjambaringtonesite2006/issues                                               
+
+</pre>
+<div class="hidden">
+  <a href="./index.html">home</a>
+</div>
+<script>
+  const $ = em => document.querySelector(em);
+  const text = v => typeof v < 'u' ? ($('pre').textContent = v) : $('pre').textContent;  
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const pop = (arr, n = 16) => Array(n).fill().map(() => arr.pop() || '').join([]);
+  let banner = '';
+
+  (async () => {
+      let s = [...text()].reverse(), x;
+      text('pre', '');
+
+      while ((c = pop(s))) {
+        const cursor = '█';
+        banner += c;
+        text(banner + cursor);
+        await sleep(0);
+      }
+  })()
+  .then(() => text(banner))
+  .then(() => sleep(250))
+  .then(() => $('.hidden').classList.remove('hidden'))
+</script>
+</body>
+</html>
